@@ -76,6 +76,24 @@ program token.aleo {
         return (remaining, transferred);
     }
 
+        //This function `transfer_all` sends the total amount of the token to the receiver from the specified token record.
+    transition transfer_all(sender: token, receiver: address) -> (token, token) {
+        // Produce a token record with the change amount for the sender.
+        let owned: token = token {
+            owner: sender.owner,
+            amount: 0u64,
+        };
+
+        // Produce a token record for the specified receiver.
+        let transferred: token = token {
+            owner: receiver,
+            amount: sender.amount,
+        };
+
+         // Output the sender's change record and the receiver's record.
+        return (owned, transferred);
+    }
+
     // The function `transfer_private_to_public` turns a specified token amount from a token record into public tokens for the specified receiver.
     // This function preserves privacy for the sender's record, however it publicly reveals the token receiver and the token amount.
     transition transfer_private_to_public(sender: token, public receiver: address, public amount: u64) -> token {

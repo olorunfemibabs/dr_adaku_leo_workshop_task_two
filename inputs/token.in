@@ -21,6 +21,17 @@ sender: token = token {
 receiver: address = aleo14f6r8ee728arw8u2mgqfv37xk7lputxk5yman56krp2gn84a8urqfwnkkf;
 amount: u64 = 3u64;
 
+[transfer_all]
+sender: token = token {
+  owner: aleo19pu64fuk0pgmkxzl2s8mwz9dcex6g4tdh4pmehd9fh9wdz9xdcgshprdr4,
+  amount: 7u64,
+  _nonce: 710947497959521588541978475371274797290179560223644761302029085270296751312group
+};
+
+receiver: address = aleo14f6r8ee728arw8u2mgqfv37xk7lputxk5yman56krp2gn84a8urqfwnkkf;
+
+
+
 [transfer_private_to_public]
 sender: token = token {
     owner: aleo1ptqvxu4gjfge8tuhgq2pqap0u5pms4p97gwhu7dwngxshpfzcszsswzpzd,
