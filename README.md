@@ -30,6 +30,8 @@ Used the command:
 leo run transfer_private
 ```
 
+I also changed the private key in the env file.
+
 ---
 
 A transparent & shielded custom token in Leo.
